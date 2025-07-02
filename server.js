@@ -18,6 +18,7 @@
 
 
 
+// server.js
 const express = require('express');
 const randomRoutes = require('./routes/randomRoutes');
 const app = express();
@@ -26,11 +27,7 @@ const app = express();
 app.use(express.json());
 
 // Routes
-app.get('/', (req, res) => {
-  res.send('Server is running');
-});
-
 app.use('/api', randomRoutes);
 
-// For Vercel's serverless function handling
+// This is for Vercel to handle the route
 module.exports = app;
