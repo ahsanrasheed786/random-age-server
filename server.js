@@ -135,15 +135,37 @@
 // 
 // // server.js
 // server.js
-const express = require('express');
-const app = express();
+// const express = require('express');
+// const app = express();
 
-// Middleware
-app.use(express.json());
+// // Middleware
+// app.use(express.json());
 
-// For Vercel to handle the route (serverless function)
-module.exports = app;
+// // For Vercel to handle the route (serverless function)
+// module.exports = app;
 
   
 
 // nsand
+
+
+
+  const express = require('express');
+  // const randomRoutes = require('./routes/randomRoutes');
+  const app = express();
+  // const config = require('./config/config');
+
+  // Middleware
+  app.use(express.json());
+
+  // Routes
+  // app.use('/api', randomRoutes);
+  app.use('/', (req, res) => res.send('server is running'));
+  app.use('/test', (req, res) => res.send('server is running on testing mood'));
+
+  // Start the server
+  // const PORT = config.PORT || 3000;
+  const PORT =  3000;
+  app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+  });
