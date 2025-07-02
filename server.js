@@ -126,4 +126,4 @@ app.use(express.json());
 app.use('/api', randomRoutes);
 
 // For Vercel to handle the route (serverless function)
-module.exports = app;
+module.exports = app;  // Vercel will use this app in a serverless context
