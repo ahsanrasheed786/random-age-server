@@ -114,16 +114,31 @@
 
 
 
-// server.js
+// // server.js
+// const express = require('express');
+// const randomRoutes = require('./routes/randomRoutes');
+// const app = express();
+
+// // Middleware
+// app.use(express.json());
+
+// // Routes
+// app.use('/api', randomRoutes);
+
+// // For Vercel to handle the route (serverless function)
+// module.exports = app;  // Vercel will use this app in a serverless context
+
+
+
+// ?? test 
+// 
+// 
+// // server.js
 const express = require('express');
-const randomRoutes = require('./routes/randomRoutes');
 const app = express();
 
 // Middleware
 app.use(express.json());
 
-// Routes
-app.use('/api', randomRoutes);
-
 // For Vercel to handle the route (serverless function)
-module.exports = app;  // Vercel will use this app in a serverless context
+module.exports = app;

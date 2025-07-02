@@ -9,12 +9,8 @@
   ],
   "routes": [
     {
-      "src": "/",
-      "dest": "/api/home.js"
-    },
-    {
-      "src": "/api/(.*)",
-      "dest": "/api/random.js"
+      "src": "/api/test",
+      "dest": "/api/test.js"
     }
   ]
 }
