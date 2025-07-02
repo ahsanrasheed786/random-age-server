@@ -59,7 +59,35 @@
 
 
 
-  const express = require('express');
+//   const express = require('express');
+// const randomRoutes = require('./routes/randomRoutes');
+// const app = express();
+
+// // Middleware
+// app.use(express.json());
+
+// // Routes
+// app.get('/', (req, res) => {
+//   res.send('Server is running');
+// });
+
+// app.use('/api', randomRoutes);
+
+// // For local development: listen on a port
+// if (process.env.NODE_ENV !== 'production') {
+//   const PORT = process.env.PORT || 3000;
+//   app.listen(PORT, () => {
+//     console.log(`Server running on port ${PORT}`);
+//   });
+// }
+
+// // For Vercel to handle the route (serverless function)
+// module.exports = app;
+
+
+
+
+const express = require('express');
 const randomRoutes = require('./routes/randomRoutes');
 const app = express();
 
@@ -67,9 +95,9 @@ const app = express();
 app.use(express.json());
 
 // Routes
-app.get('/', (req, res) => {
-  res.send('Server is running');
-});
+// app.get('/', (req, res) => {
+//   res.send('Server is running');
+// });
 
 app.use('/api', randomRoutes);
 
