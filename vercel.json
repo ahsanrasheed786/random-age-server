@@ -1,3 +1,4 @@
+// vercel.json
 {
   "version": 2,
   "builds": [
@@ -8,12 +9,12 @@
   ],
   "routes": [
     {
-      "src": "/api/random",
-      "dest": "/api/random.js"
-    },
-    {
       "src": "/",
       "dest": "/api/home.js"
+    },
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/random.js"
     }
   ]
 }
