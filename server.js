@@ -8,6 +8,7 @@ app.use(express.json());
 
 // Routes
 app.use('/api', randomRoutes);
+app.use('/', (req, res) => res.send('server is running'));
 
 // Start the server
 const PORT = config.PORT || 3000;
