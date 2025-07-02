@@ -2,7 +2,6 @@
 
 const express = require('express');
 const cors = require('cors');  // Import the CORS package
-// const random = require('./api/random');
 
 const app = express();
 
