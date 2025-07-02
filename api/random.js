@@ -1,5 +1,13 @@
 // api/random.js
 
+const express = require('express');
+const cors = require('cors');  // Import the CORS package
+
+const app = express();
+
+// Use CORS middleware to allow all origins (or you can specify an origin)
+app.use(cors());
+
 const { generateRandomAge, getRandomElement } = require('../utils/randomGenerator');
 
 // Data arrays
